@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Football Data</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <nav class="title-bar">
+            <div class="logo">
+                <a href="/"><img src="./img/logosite.png" alt="logo" id="logo"></a>
+                <h1 id="title"><a href=".">Football Data</a></h1>
+            </div>
+
+                <div class="toggle-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span>Menu</span>
+                </div>
+
+                <div class="links">
+                    <a href="#my-team" class="selected">My Team</a>
+                    <a href="#news">News</a></label>
+                    <a href="#latest-match">Latest match</a></label>
+                </div>
+        </nav>
+        
+        <section id="my-team">
+            <div class="pick-fav-container">
+                <div class="pick-fav">
+                    <!-- Dynamic Text -->
+                    <h2></h2>
+
+                    <div class="country">
+                        <select name="country" class="select-country">
+                            <option value="none">Select country</option>
+                        </select>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search a team..." class="search-team">
+                        <button class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass search-magn"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Current favorite team info -->
+                <div class="fav-team-container">
+                    <span class="fa fa-star" style="color:yellow"></span>
+                    Your favorite team:
+                    <div class="fav-team">
+                        None
+                    </div>
+                </div>
+
+                <!-- Selected team info -->
+                <div class="team-card-container">
+                    <div class="team-card">
+                        <img src="./img/logosite.png" alt="logo">
+                    </div>
+                    <button class="pick-fav-btn">Pick team as favorite</button>
+                </div>
+            </div>
+
+            <!-- Teams found based on user input -->
+            <div class="team-container">
+                <div class="team-list">
+                    <ul class="header-info">
+                        <li>Logo</li>
+                        <li>ID</li>
+                        <li>Team name</li>
+                        <li>City</li>
+                        <li>Stadium</li>
+                    </ul>
+                    <ul class="team-info">
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- News about favorite team -->
+        <section id="news" class="fade-in">
+            <h2 class="match-type">
+                LATEST NEWS
+            </h2>
+
+            <div class="news-container">
+            </div>
+        </section>
+
+        <!-- Latest match information -->
+        <section id="latest-match" class="fade-in">
+            <div class="match-container">
+                <div class="match-display">
+                    <h2 class="match-type">
+                        Last match
+                    </h2>
+
+                    <div class="match main-match">
+
+                        <figure class="team">
+                            <img src="./img/logosite.png"/>
+                            <figcaption class="team-name home-team">Text below the image</figcaption>
+                        </figure>
+
+                        <span class="score"> 0-0 </span>
+                        
+                        <figure class="team">
+                            <img src="./img/logosite.png"/>
+                            <figcaption class="team-name away-team">Text below the image</figcaption>
+                        </figure>
+
+                    </div>
+
+                    <div class="match-info fade-in">
+                        <div class="league">
+                            <img src="./img/logosite.png">
+                            <span class="text-info">League</span>
+                        </div>
+
+                        <div class="stadium-date">
+                            <span class="stadium-info">Stadionul Rapid-Giulesti</span>
+                            <span class="date-info">26.06.2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Useful Links</p>
+            <div class="icons">
+                <a href="https://github.com/alexk1923"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alexandru-kullman/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:alexandrukullman@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            © 2022 Alex Kullman
+        </footer>
+        
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+<script src="https://kit.fontawesome.com/391f2c263f.js" crossorigin="anonymous"></script>
+<script
+type="module"
+src="https://widgets.api-sports.io/football/1.1.8/widget.js">
+</script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
